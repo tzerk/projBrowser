@@ -1,0 +1,4 @@
+Name: Browse RStudio Projects
+Description: A simple browser for RStudio Projects
+Binding: projectBrowserAddin
+Interactive: true
