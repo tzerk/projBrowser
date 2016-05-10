@@ -104,7 +104,7 @@ projectBrowserAddin <- function() {
     ## CLOSING ----
     observeEvent(input$done, {
       if (file.exists(input$projectList)) {
-        shell.exec(input$projectList)
+        shell.exec(dirname(input$projectList))
         stopApp(NULL)
       }
     })
