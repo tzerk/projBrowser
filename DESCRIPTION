@@ -10,13 +10,17 @@ License: GPL-3
 Depends:
     R (>= 3.2.4)
 Imports:
+    Rcpp,
     shiny (>= 0.13),
     miniUI (>= 0.1.1),
     rstudioapi (>= 0.4)
+LinkingTo:
+    Rcpp
 Collate:
     'projBrowser-package.R'
     'projBrowser.R'
     'tooltip.R'
     'utils.R'
+    'RcppExports.R'
 LazyData: FALSE
 RoxygenNote: 5.0.1

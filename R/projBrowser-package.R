@@ -4,5 +4,7 @@
 #'
 #' @name projBrowser
 #' @docType package
-#' @import shiny miniUI rstudioapi
+#' @import shiny miniUI rstudioapi Rcpp
+#' @importFrom Rcpp evalCpp
+#' @useDynLib projBrowser
 NULL

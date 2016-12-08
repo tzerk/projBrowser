@@ -104,7 +104,7 @@ projectBrowserAddin <- function() {
     ## CLOSING ----
     observeEvent(input$done, {
       if (file.exists(input$projectList)) {
-        shell.exec(dirname(input$projectList))
+        .exec(paste0("start \"title\" \"", input$projectList, "\""))
         stopApp(NULL)
       }
     })

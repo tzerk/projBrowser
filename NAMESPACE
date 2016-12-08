@@ -2,6 +2,9 @@
 
 export(projectBrowserAddin)
 export(tooltip)
+import(Rcpp)
 import(miniUI)
 import(rstudioapi)
 import(shiny)
+importFrom(Rcpp,evalCpp)
+useDynLib(projBrowser)

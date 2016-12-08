@@ -22,3 +22,7 @@ vignettes/*.pdf
 
 # directories
 test/
+
+# Rcpp files
+*.o
+*.dll
