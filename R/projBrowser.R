@@ -11,7 +11,7 @@ projectBrowserAddin <- function() {
     gadgetTitleBar("Browse RStudio Projects"),
     miniContentPanel(
       miniButtonBlock(
-        actionButton("add", "Add", icon = icon("plus-square")),
+        shinyDirButton("folder", "Add", "Please select a folder", FALSE, class = "btn-default"),
         tooltip("add", "Scan directory for project files (.Rproj).", placement = "bottom"),
         actionButton("validate", "Validate", icon = icon("check-square")),
         tooltip("validate", "Remove non-existing and duplicate projects", placement = "bottom"),
@@ -39,8 +39,11 @@ projectBrowserAddin <- function() {
       radioButtons("projectList", "Select a project folder", projects, width = 300)
     })
 
-    observeEvent(input$add, {
-      entries <- find_Proj()
+    shinyDirChoose(input = input, id = "folder",
+                   roots = getVolumes(), filetypes = c("", "txt"))
+
+    observeEvent(input$folder, {
+      entries <- find_Proj(parseDirPath(getVolumes(), input$folder))
 
       if (is.null(entries))
         return(NULL)

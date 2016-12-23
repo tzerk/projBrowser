@@ -55,10 +55,8 @@ read_ProjList <- function() {
 # of file paths
 find_Proj <- function(dir) {
 
-  if (missing(dir))
-    dir <- utils::choose.dir()
   if (is.na(dir))
-    return(NULL)
+    print("dir na")
 
   files <- list.files(dir, pattern = "*.Rproj$", recursive = TRUE, full.names = TRUE)
 
