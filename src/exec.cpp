@@ -1,4 +1,4 @@
-#include <windows.h>
+#include <stdlib.h>
 
 // [[Rcpp::export(".exec")]]
 int exec(const char* file) {
