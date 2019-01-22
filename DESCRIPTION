@@ -7,6 +7,7 @@ Authors@R: person("Christoph", "Burow", role = c("aut", "cre"), email = "christo
 Maintainer: Christoph Burow <christoph.burow@gmx.net>
 Description: A simple browser for RStudio Projects.
 License: GPL-3
+Encoding: UTF-8
 Depends:
     R (>= 3.2.4)
 Imports:
@@ -24,4 +25,4 @@ Collate:
     'utils.R'
     'RcppExports.R'
 LazyData: FALSE
-RoxygenNote: 5.0.1
+RoxygenNote: 6.1.1
