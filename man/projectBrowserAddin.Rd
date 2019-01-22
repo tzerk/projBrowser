@@ -9,4 +9,3 @@ projectBrowserAddin()
 \description{
 A convenient browser for RStudio Projects
 }
-

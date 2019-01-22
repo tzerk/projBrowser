@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // exec
 int exec(const char* file);
-RcppExport SEXP projBrowser_exec(SEXP fileSEXP) {
+RcppExport SEXP _projBrowser_exec(SEXP fileSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -15,4 +15,14 @@ BEGIN_RCPP
     rcpp_result_gen = Rcpp::wrap(exec(file));
     return rcpp_result_gen;
 END_RCPP
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_projBrowser_exec", (DL_FUNC) &_projBrowser_exec, 1},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_projBrowser(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }

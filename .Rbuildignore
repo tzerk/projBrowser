@@ -4,6 +4,7 @@
 ^\.Rproj\.user$
 ^\.travis\.yml$
 README\.md
+LICENSE
 ^\test\*
 ^\.Rprofile$
 ^appveyor\.yml$

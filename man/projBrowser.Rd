@@ -8,4 +8,3 @@
 \description{
 A simple browser for RStudio Projects
 }
-
